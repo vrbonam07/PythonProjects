@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .navbar {
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        .navbar a {
+          float: left;
+          font-size: 16px;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+        
+        .dropdown .dropbtn {
+          font-size: 16px;  
+          border: none;
+          outline: none;
+          color: white;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+        
+        .navbar a:hover, .dropdown:hover .dropbtn {
+          background-color: red;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+          background-color: #ddd;
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+
+    table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+        }
+</style>
+    
+<title>{{ projectname }}</title>
+<h1>Welcom to Project {{ projectname }}</h1>
+</head>
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Create
+            </button>
+            <div class="dropdown-content">
+                {% for task in tasktypes %}
+                <form>
+                    <a href="/project/{{projectname}}/{{task[0]}}">{{task[0]}}</a>
+                </form>
+                {% endfor %}
+            </div>
+        </div>
+        <a href="/home">Back</a>
+    </div>
+    <form>
+      <table>
+        <tr>
+          <th>TASK_ID</th>
+          <th>PROJECT NAME</th>
+          <th>TASK TYPE</th>
+          <th>TITTLE</th>
+          <TH>DESCRIPTION</TH>
+          <TH>PROGRESS</TH>
+          <TH>STATUS</TH>
+        </tr>
+        {% for tl in tasklist %}
+          <form>
+                  <tr>
+                    <td>{{tl[0]}}</td>
+                    <td>{{tl[1]}}</td>
+                    <td>{{tl[2]}}</td>
+                    <td>{{tl[3]}}</td>
+                    <td>{{tl[4]}}</td>
+                    <td>{{tl[5]}}</td>
+                    <td>
+                      <form method = 'POST'>
+                        <select id="taskprogerss"> 
+                            <option>To Do</option>
+                            <option>In Progress</option>
+                            <option>Dev Complete</option>
+                            <option>QA Review</option>
+                            <option>QA Complete</option>
+                            <option>Resolved</option>
+                            <option>Done</option>
+                            <option>Complete</option>
+                        </select>
+                        <input type="submit">
+                      </form>
+                    </td>
+                  </tr>
+          {% endfor %}
+      </table>
+    </form>
+
+</body>
+</html>
