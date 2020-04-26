@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' 
+        type='text/css' 
+        href='{{ url_for("static", filename="css/login_style.css") }}?version62'>
+        <title>BugTracker</title>
+    </head>
+
+    <body class="bg">
+        <form class="credentials" method="POST"> 
+            <label for="username">Username: </label>
+            <input type="text" id="username" name="username" placeholder="*Required"><br><br>
+            <label for="password">Password: </label>
+            <input type="text" id="password" name="password"><br><br>
+            <input type="submit">
+          </form>
+          <form class="register" action="/register">
+            <input type="submit" value="+Register">
+          </form>
+    </body>
+</html>

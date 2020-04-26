@@ -1,0 +1,39 @@
+.bg {
+    background-image: url(https://wallpaperplay.com/walls/full/6/e/6/8975.jpg);
+    background-size: cover;
+}
+
+.credentials {
+    size: 50%;
+    position: absolute;
+    left: 45%;
+    right: 50%;
+    bottom: 40%;
+    color: white;
+}
+
+.rectanglebg {
+    background-image: url(https://images.unsplash.com/photo-1488229297570-58520851e868?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1498&q=80);
+    background-size: cover;
+    height:300px;
+    width: 300px;
+    background-color:blue;
+    position: absolute;
+    right: 50%;
+    left: 40%;
+    bottom: 50%;
+    top: 25%;
+    border: 3px solid black;
+    border-radius: 0.5pc;
+  }  
+
+.login_bg {
+    height: 100px;
+    width: 50px;
+    background-color: cornflowerblue;
+    position: absolute;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+}

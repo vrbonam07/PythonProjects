@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This below Js reference is used to get symbol reference from web fontawesom -->
+        <script src="https://kit.fontawesome.com/cec9a75be6.js" crossorigin="anonymous"></script>
+        <!-- Below is how we link SSC styling sheet from static folder -->
+        <link rel='stylesheet' 
+            type='text/css' 
+            href='{{ url_for("static", filename="css/Topic_style.css") }}?verion43'>
+        <title>Cloud Platforms</title>
+    </head> 
+    <body>
+        <form action='/login' method='GET' >
+            <button class="Home" type="submit" style="vertical-align:middle">
+            <span><i class="fas fa-home"></i></span></button>
+        </form>
+        <h1>This page will talk about Various Cloud Platforms</h1>
+        <h2>AWS, AZURE and GCP</h2>
+    </body>
+</html>

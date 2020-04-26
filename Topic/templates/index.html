@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- This below Js reference is used to get symbol reference from web fontawesom -->
+    <script src="https://kit.fontawesome.com/cec9a75be6.js" crossorigin="anonymous"></script>
+    <!-- Below is how we link SSC styling sheet from static folder -->
+    <link rel='stylesheet' 
+    type='text/css'
+    href='{{ url_for("static", filename="css/Topic_style.css") }}?verion83'>
+    <title>VBonam-Blog</title>    
+  </head>
+  <body class="indexbg">
+    <h1 class="indexh1">
+          THIS MY NEW BLOG
+    </h1>
+    <p class="indexh1"> 
+          Lets work on getting this blog up and running <br>
+          Lets talk about below list of topics 
+    </p>
+    <table style="color: aquamarine;">
+      <tr><th style="background-color:blue;">Topics</th></tr>
+      <tr><td>
+        <form  action='/login/Tech' method='GET'>
+          <button class="btn" type="submit">
+            <span><i class="fas fa-cogs"></i></span>
+            Tech</button>
+        </form>
+      </td></tr>
+      <tr><td>
+          <form action='/login/CloudPlatforms' method='GET'>
+              <button class="btn" type="submit">
+                <span><i class="fas fa-cloud"></i></span>
+              CloudPlatforms</button>
+            </form>
+      </td></tr>
+      <tr><td>
+        <form action='/login/Travel' method='GET'>
+          <button class="btn" type="submit">
+            <span><i class="fas fa-luggage-cart"></i></span>
+          Travel</button>
+        </form>
+      </td></tr>
+      <tr><td>
+        <form action='/login/Food' method='GET'>
+          <button class="btn" type="submit">
+            <span><i class="fas fa-utensils"></i></span>
+          Food</button>
+        </form>
+      </td></tr>
+      <tr><td>
+        <form action='/login/Clothing' method='GET'>
+          <button class="btn" type="submit">
+            <span><i class="fas fa-socks"></i></span>
+          Clothing</button>
+        </form>
+      </td></tr>
+      <tr><td>
+        <form action='/login/Movies' method='GET'>
+          <button class="btn" type="submit">
+            <span><i class="fas fa-video"></i></span>
+          Movies</button>
+        </form>
+      </td></tr>
+      <tr><td>
+        <form action='/login/notes' method='GET'>
+          <button class="btn" type="submit">
+          notes</button>
+        </form>
+      </td></tr>
+    </table>
+    <form action='/' method='GET'>
+      <button class="logout" type="submit">
+      logout</button>
+    </form>
+  </body>
+</html>
